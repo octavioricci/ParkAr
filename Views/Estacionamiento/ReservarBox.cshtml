@@ -1,0 +1,51 @@
+﻿
+@model ParkAr.ViewModels.ReservaBoxViewModel
+
+@{
+    ViewBag.Title = "ReservarBox";
+    Layout = "~/Views/Shared/_LayoutEmbebedPage.cshtml";
+}
+
+<h2>ReservarBox</h2>
+
+    <!-- El primer argumento es el action, el segundo el controller-->
+    @using (Html.BeginForm("GenerarReserva", "Estacionamiento"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(r => r.EstacionamientoSeleccionado.Nombre)
+            @Html.TextBoxFor(r => r.EstacionamientoSeleccionado.Nombre, new { @class = "form-control" })
+          
+        </div>
+    }
+       @* <div class="form-group">
+            @Html.LabelFor(r => r.BoxSeleccionado.BoxId)
+            @Html.TextBoxFor(r => r.BoxSeleccionado.BoxId, new { @class = "form-control" })
+            @Html.ValidationMessageFor(r => r.BoxSeleccionado.BoxId)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(r => r.BoxSeleccionado.CategoriaBox.Descripcion)
+            @Html.TextBoxFor(r => r.BoxSeleccionado.CategoriaBox.Descripcion, new { @class = "form-control" })
+            @Html.ValidationMessageFor(r => r.BoxSeleccionado.CategoriaBox.Descripcion)
+        </div>
+        <div class="form-group">
+
+            @Html.LabelFor(r => r.Horas)
+            <!--DropDownListFort
+            Primer argumento: de que tipo  (es el foreign key del customer con el primary key del membershiptype)
+            Segundo argumento: Paso la lista de memberships
+            SelectList
+            Primer argumento: Listado de items
+            Segundo argumento: Nombre de la propiedad que tiene el valor
+            Tercer argumento: Nombre del valor que tiene el texto
+
+            Tercer argumento: Lo que quiero que aparezca dentro del combo visible, puedo poner ""
+            Cuarto argumento: el formato del textbox por bootrap-->
+            @Html.DropDownListFor(r => 0, new SelectList(Model.Horas, "Id", "Name"), "Horas", new { @class = "form-control" })
+            @Html.ValidationMessageFor(r => r.CantidadHoras)
+        </div>
+        
+        @Html.HiddenFor(r => r.Cliente.ClienteId);
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+*@
+
