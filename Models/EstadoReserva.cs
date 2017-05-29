@@ -9,7 +9,9 @@ namespace ParkAr.Models
     {
         public int EstadoReservaId { get; set; }
 
-        public string Descripcion { get; set; }     
+        public string Descripcion { get; set; }   
+        
+
 
 
     }

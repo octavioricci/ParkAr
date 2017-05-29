@@ -11,9 +11,7 @@ namespace ParkAr.Models
 
         public int Monto { get; set; }
 
-        public TimeSpan FechaDesde { get; set; }
-
-        public TimeSpan FechaHasta { get; set; }
+       
 
     }
 }

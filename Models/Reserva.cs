@@ -10,17 +10,15 @@ namespace ParkAr.Models
         public int ReservaId { get; set; }
 
         public Vehiculo Vehiculo { get; set; }
-
-        public int VehiculoId { get; set; }
-
+        
+                               
         public Box Box { get; set; }
 
         public int BoxId { get; set; }
 
-        public EstadoBox EstadoBox { get; set; }
+        public DateTime FechaDesde { get; set; }
 
-        public int MyProperty { get; set; }
-
+        public DateTime FechaHasta { get; set; }
 
     }
 }
