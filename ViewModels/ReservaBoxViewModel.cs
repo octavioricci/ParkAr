@@ -11,16 +11,26 @@ namespace ParkAr.ViewModels
     {
         [Display(Name = "Nombre Cliente")]
         public Cliente Cliente { get; set; }
+
         [Display(Name = "Numero Box")]
         public Box BoxSeleccionado { get; set; }
-        [Display(Name = "Estacionamiento")]
 
+        [Display(Name = "Estacionamiento")]
         public Estacionamiento EstacionamientoSeleccionado { get; set; }
+
         [Display(Name = "Horas")]
         public List<String> Horas { get; set; }
+
         public byte CantidadHoras { set; get; }
+
         [Display(Name = "Estacionamientos")]
         public List<Estacionamiento> Estacionamientos { set; get; }
+
+        public Reserva Reserva { get; set; }
+
+        public DateTime Desde { get; set; }
+
+        public DateTime Hasta { get; set; }
 
     }
 }
